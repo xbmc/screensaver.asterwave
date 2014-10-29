@@ -19,8 +19,8 @@
  * Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 */
 
-#include "xbmc/xbmc_scr_dll.h"
-#include "xbmc/libXBMC_addon.h"
+#include "kodi/xbmc_scr_dll.h"
+#include "kodi/libXBMC_addon.h"
 #include <GL/gl.h>
 #include <GL/glu.h>
 #include <SOIL/SOIL.h>
