@@ -19,8 +19,8 @@
  * Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 */
 
-#include "kodi/xbmc_scr_dll.h"
-#include "kodi/libXBMC_addon.h"
+#include "xbmc_scr_dll.h"
+#include "libXBMC_addon.h"
 #include <GL/gl.h>
 #include <GL/glu.h>
 #include <SOIL/SOIL.h>
@@ -214,7 +214,7 @@ void SetDefaults()
   world.nextEffectTime = 0;
   world.isWireframe = false;
   world.isTextureMode = true;
-  g_lightDir = CVector(0.0f,0.6f,-0.8f);
+  g_lightDir = CVector(0.0f,0.8f,-0.6f);
   XBMC->GetSetting("__addonpath__", world.szTextureSearchPath);
   strcat(world.szTextureSearchPath,"/resources");
   world.nextTextureTime = 1024;
@@ -274,10 +274,10 @@ void SetCamera()
   glMatrixMode(GL_PROJECTION);
   glLoadIdentity();
   float aspectRatio = (float)m_iWidth/(float)m_iHeight;
-  gluPerspective(90, aspectRatio, 1.0, 1000.0);
+  gluPerspective(45, aspectRatio, 1.0, 1000.0);
   glMatrixMode(GL_MODELVIEW);
   glLoadIdentity();
-  gluLookAt(0.0, 5.0, 5.0, 0.0, 3.0, 0.0, 0.0, -0.707, 0.707);
+  gluLookAt(0.0, 0.0, -15.0, 0.0, 0.0, 0.0, 0.0, -0.707, -0.707);
 }
 
 void SetupRenderState()
@@ -314,7 +314,7 @@ extern "C" void Start()
 
 extern "C" void Render()
 {
-  //RenderGradientBackground();
+  RenderGradientBackground();
   CreateLight();
   SetupRenderState();
 

@@ -8,9 +8,11 @@ enable_language(CXX)
 
 find_package(kodi REQUIRED)
 find_package(SOIL REQUIRED)
+find_package(OpenGL REQUIRED)
 
 include_directories(${KODI_INCLUDE_DIR}
-                    ${SOIL_INCLUDE_DIRS})
+                    ${SOIL_INCLUDE_DIRS}
+                    ${OPENGL_INCLUDE_DIRS})
 
 set(ASTERWAVE_SOURCES src/Effect.cpp
                       src/Util.cpp
@@ -18,6 +20,7 @@ set(ASTERWAVE_SOURCES src/Effect.cpp
                       src/waterfield.cpp)
 
 set(DEPLIBS ${SOIL_LIBRARIES})
+list(APPEND DEPLIBS ${OPENGL_LIBRARIES})
 
 build_addon(screensaver.asterwave ASTERWAVE DEPLIBS)
 

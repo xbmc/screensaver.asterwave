@@ -14,7 +14,7 @@
 
 WaterField::WaterField()
 {
-	Init(-10,10,-10,10,80,80,0, 0.5f, 0.05f, 1.0f, 0.04f, false);
+	Init(-10,10,-50,50,160,160, 10, 0.1f, 0.7f, 1.0f, 0.54f, false);
 }
 
 WaterField::WaterField(float xmin, float xmax, float ymin, float ymax, int xdivs, int ydivs, float height, float elasticity, float viscosity, float tension, float blendability, bool textureMode)
@@ -264,7 +264,6 @@ void WaterField::Render()
       }
       // Draw it
       glEnable(GL_TEXTURE_2D);
-      //glBindTexture(GL_TEXTURE_2D, m_Texture);
       
       glBegin(GL_TRIANGLE_STRIP);
       for (size_t j=0;j<verts.size();++j)
