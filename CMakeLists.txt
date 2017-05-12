@@ -19,6 +19,13 @@ set(ASTERWAVE_SOURCES src/Effect.cpp
                       src/Water.cpp
                       src/waterfield.cpp)
 
+set(ASTERWAVE_HEADERS src/Effect.h
+                      src/timer.h
+                      src/types.h
+                      src/Util.h
+                      src/waterfield.h
+                      src/Water.h)
+
 set(DEPLIBS ${SOIL_LIBRARIES})
 list(APPEND DEPLIBS ${OPENGL_LIBRARIES})
 
