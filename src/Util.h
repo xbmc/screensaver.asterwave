@@ -4,16 +4,16 @@
 
 struct COLORVERTEX
 {
-	float x, y, z; // The untransformed position for the vertex.
-	float nx, ny, nz; // Normal vector for lighting calculations	
-        CRGBA color; // The vertex colour.
+  float x, y, z; // The untransformed position for the vertex.
+  float nx, ny, nz; // Normal vector for lighting calculations	
+  CRGBA color; // The vertex colour.
 };
 
 struct TEXTUREDVERTEX
 {
-	float x, y, z; // The untransformed position for the vertex.
-	float nx, ny, nz; // Normal vector for lighting calculations	
-        float tu, tv; //texture
+  float x, y, z; // The untransformed position for the vertex.
+  float nx, ny, nz; // Normal vector for lighting calculations	
+  float tu, tv; //texture
 };
 
 CRGBA HSVtoRGB( float h, float s, float v );

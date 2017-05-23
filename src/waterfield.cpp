@@ -6,7 +6,7 @@
 // reused and so is well commented :)
 //
 //////////////////////////////////////////////////////////////////
-#include "waterfield.h"       
+#include "waterfield.h"
 #include "Util.h"
 #include <memory.h>
 #include <GL/gl.h>
@@ -14,7 +14,7 @@
 
 WaterField::WaterField()
 {
-	Init(-10,10,-50,50,160,160, 10, 0.1f, 0.7f, 1.0f, 0.54f, false);
+  Init(-10,10,-50,50,160,160, 10, 0.1f, 0.7f, 1.0f, 0.54f, false);
 }
 
 WaterField::WaterField(float xmin, float xmax, float ymin, float ymax, int xdivs, int ydivs, float height, float elasticity, float viscosity, float tension, float blendability, bool textureMode)
@@ -306,8 +306,8 @@ void WaterField::SetNormalForPoint(int i, int j)
 //  p.z = v1.x * v2.y - v2.x * v1.y;
 
 //  these are the vectors to use.
-//	v1 = (bi-ai)*xdivdist, (bj-aj)*ydivdist, (myPoints[bi][bj].height-myPoints[ai][aj].height)
-// 	v2 = (ci-ai)*xdivdist, (cj-aj)*ydivdist, (myPoints[ci][cj].height-myPoints[ai][aj].height)
+//   v1 = (bi-ai)*xdivdist, (bj-aj)*ydivdist, (myPoints[bi][bj].height-myPoints[ai][aj].height)
+//   v2 = (ci-ai)*xdivdist, (cj-aj)*ydivdist, (myPoints[ci][cj].height-myPoints[ai][aj].height)
 
   CVector* norm = &(myPoints[i][j].normal);
   CVector temp;

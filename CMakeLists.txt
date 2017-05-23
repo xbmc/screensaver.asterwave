@@ -10,7 +10,7 @@ find_package(Kodi REQUIRED)
 find_package(SOIL REQUIRED)
 find_package(OpenGL REQUIRED)
 
-include_directories(${KODI_INCLUDE_DIR}
+include_directories(${KODI_INCLUDE_DIR}/.. # Hack way with "/..", need bigger Kodi cmake rework to match right include ways
                     ${SOIL_INCLUDE_DIRS}
                     ${OPENGL_INCLUDE_DIRS})
 
