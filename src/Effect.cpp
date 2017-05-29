@@ -80,7 +80,7 @@ void EffectTwist::apply()
     posC.x = 0.4f*minscale * sin(m_pSettings->frame*modulate);
     posC.y = 0;
     TransformCoord(&posC,&posC,&mat);
-    
+
     mat.Rotate(0,0,m_pSettings->frame*speed);
     posO.x = minscale/36.5f;
     posO.y = minscale/36.5f;
@@ -399,7 +399,7 @@ void EffectBullet::incrementBullets()
         bullets[i].dy = cos(angle);
         bullets[i].x = minx + scalex*frand();
         bullets[i].y = miny + scaley*frand();
-        
+
         int time = timeToHit(&bullets[i]);
         bullets[i].x += bullets[i].dx * time;
         bullets[i].y += bullets[i].dy * time;
@@ -436,10 +436,9 @@ void EffectBullet::bounceBullets(Bullet * bulA, Bullet * bulB)
 //         (for single precision calculations, 
 //          1.0E-12 should be replaced by a larger value). **************  
 
-  fy21= .0000001f*fabs(y21);                            
-  if ( fabs(x21)<fy21 )   
-    x21=fy21 * (x21<0?-1:1); 
-  
+  fy21= .0000001f*fabs(y21);
+  if ( fabs(x21)<fy21 )
+    x21=fy21 * (x21<0?-1:1);
 
 //     ***  update velocities ***
   a=y21/x21;

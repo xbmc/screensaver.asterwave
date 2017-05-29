@@ -2,7 +2,8 @@
 #ifndef __WATER_H_
 #define __WATER_H_
 
-#include "waterfield.h" 
+#include <string>
+#include "waterfield.h"
 
 void SetAnimation();
 
@@ -17,7 +18,7 @@ struct WaterSettings
   float scaleX;
   bool isWireframe;
   bool isTextureMode;
-  char szTextureSearchPath[1024];
+  std::string szTextureSearchPath;
 };
 
-#endif 
+#endif

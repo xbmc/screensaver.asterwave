@@ -107,7 +107,6 @@ class EffectBullet : public AnimationEffect
     float bulletDensity;
     float minsize;
     float maxsize;
-    
 };
 
 class EffectTwist : public AnimationEffect
@@ -132,5 +131,4 @@ class EffectText : public AnimationEffect
     char marqueeString[256];
     void drawLine(float xa, float ya, float xb, float yb, float width);
     void drawChar(char c, float sizex, float sizey, float width, float posx, float posy);
-    
 };
