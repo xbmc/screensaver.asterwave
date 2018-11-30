@@ -7,11 +7,11 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR})
 enable_language(CXX)
 
 find_package(Kodi REQUIRED)
-find_package(SOIL REQUIRED)
 find_package(OpenGL REQUIRED)
 
+add_subdirectory(lib/SOIL2)
+
 include_directories(${KODI_INCLUDE_DIR}/.. # Hack way with "/..", need bigger Kodi cmake rework to match right include ways
-                    ${SOIL_INCLUDE_DIRS}
                     ${OPENGL_INCLUDE_DIRS})
 
 set(ASTERWAVE_SOURCES src/Effect.cpp
@@ -26,8 +26,8 @@ set(ASTERWAVE_HEADERS src/Effect.h
                       src/waterfield.h
                       src/Water.h)
 
-set(DEPLIBS ${SOIL_LIBRARIES})
-list(APPEND DEPLIBS ${OPENGL_LIBRARIES})
+set(DEPLIBS ${OPENGL_LIBRARIES})
+list(APPEND DEPLIBS soil2)
 
 build_addon(screensaver.asterwave ASTERWAVE DEPLIBS)
 

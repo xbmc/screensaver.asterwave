@@ -23,13 +23,13 @@
 
 #include <GL/gl.h>
 #include <GL/glu.h>
-#include <SOIL.h>
 #include <sys/dir.h>
 
 #include "timer.h"
 #include "Water.h"
 #include "Effect.h"
 #include "Util.h"
+#include "SOIL2/SOIL2.h"
 #include <cstdlib>
 #include <memory.h>
 
