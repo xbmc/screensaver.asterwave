@@ -26,7 +26,6 @@
 
 #include <sys/dir.h>
 
-#include "timer.h"
 #include "Water.h"
 #include "Effect.h"
 #include "Util.h"

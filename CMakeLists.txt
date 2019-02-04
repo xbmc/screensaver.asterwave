@@ -39,7 +39,6 @@ set(ASTERWAVE_SOURCES src/Effect.cpp
                       src/waterfield.cpp)
 
 set(ASTERWAVE_HEADERS src/Effect.h
-                      src/timer.h
                       src/types.h
                       src/Util.h
                       src/waterfield.h
