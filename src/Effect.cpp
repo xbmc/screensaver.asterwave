@@ -1,3 +1,23 @@
+/*
+ *  Copyright (C) 2005-2019 Team Kodi
+ *  Copyright (C) 2007 Asteron (http://asteron.projects.googlepages.com/home)
+ *  This file is part of Kodi - https://kodi.tv
+ *
+ *  This Program is free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation; either version 2, or (at your option)
+ *  any later version.
+ *
+ *  This Program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with Kodi; see the file COPYING.  If not, see
+ *  <http://www.gnu.org/licenses/>.
+ */
+
 #include "Effect.h"
 #include <string.h>
 
@@ -118,7 +138,7 @@ void EffectXBMCLogo::apply()
       posBe.x*r + posBs.x*(1-r), posBe.y*r + posBs.y*(1-r),
       2.0, 1.4f,0.05f,CRGBA(54,69,102,255));
   }
-  
+
   else if (time < times[1]) //XBMC
   {
     ms *= 0.78f;
@@ -134,13 +154,13 @@ void EffectXBMCLogo::apply()
     m_pSettings->waterField->SetHeight(cx+sx*ms*(-0.45f-(1+x)*0.1f), cy+ms*(-0.0f-y*0.1f),0.6f,0.6f, CRGBA(133,194,38,255));
     //c
     m_pSettings->waterField->SetHeight(cx+sx*ms*(0.46f+x*0.1f), cy+ms*(-0.0f+y*0.1f),0.6f,0.6f, CRGBA(189,209,227,255));
-  
+
     r = rorig*1.25f;
     x = r < 0.25f ? -1 : r>1.0f? 4*(1.0f-r): sin(-r*2*3.141592f);
     y = r < 0.25f ? 2 - 8*r :r>1.0f? 1.0f: cos(-r*2*3.141592f);
     //b
     m_pSettings->waterField->SetHeight(cx+sx*ms*(-0.180f+x*0.1f), cy+ms*(-0.00f-y*0.1f),0.6f,0.6f, CRGBA(133,194,38,255));
-  
+
     r = rorig * 0.75f;
     x = r < 0.25f ? -1 : sin(-r*2*3.141592f);
     y = r < 0.25f ? 1 - 4*r : cos(-r*2*3.141592f);
@@ -180,8 +200,8 @@ void EffectBoil::popBubble(Bubble * bub)
 }
 bool EffectBoil::bubblesTooClose(Bubble * bubbleA, Bubble * bubbleB)
 {
-  float distsq = (bubbleA->x - bubbleB->x)*(bubbleA->x - bubbleB->x) + 
-    (bubbleA->y - bubbleB->y)*(bubbleA->y - bubbleB->y); 
+  float distsq = (bubbleA->x - bubbleB->x)*(bubbleA->x - bubbleB->x) +
+    (bubbleA->y - bubbleB->y)*(bubbleA->y - bubbleB->y);
   return (bubbleA->size + bubbleB->size)*(bubbleA->size + bubbleB->size) > distsq;
 }
 
@@ -220,7 +240,7 @@ void EffectBoil::incrementBubbles()
         bubbles[i].speed = 0.05f + 0.1f*frand();
       }
     }
-    else 
+    else
     {
       bubbles[i].size += bubbles[i].speed;
       for (int j = 0; j < i; j++)
@@ -361,8 +381,8 @@ void EffectBullet::resetBullet(Bullet * Bullet)
 }
 bool EffectBullet::bulletsTooClose(Bullet * bulletA, Bullet * bulletB)
 {
-  float distsq = (bulletA->x - bulletB->x)*(bulletA->x - bulletB->x) + 
-    (bulletA->y - bulletB->y)*(bulletA->y - bulletB->y); 
+  float distsq = (bulletA->x - bulletB->x)*(bulletA->x - bulletB->x) +
+    (bulletA->y - bulletB->y)*(bulletA->y - bulletB->y);
   return (bulletA->size + bulletB->size)*(bulletA->size + bulletB->size) > distsq;
 }
 
@@ -408,12 +428,12 @@ void EffectBullet::incrementBullets()
         bullets[i].deadTime = m_pSettings->frame + timeToHit(&bullets[i]);
       }
     }
-    else 
+    else
     {
       for (int j = 0; j < i; j++)
         if (bullets[j].alive && bulletsTooClose(&bullets[i],&bullets[j]))
           bounceBullets(&bullets[i],&bullets[j]);
-    
+
       if (bullets[i].deadTime <= m_pSettings->frame)
         resetBullet(&bullets[i]);
     }
@@ -432,9 +452,9 @@ void EffectBullet::bounceBullets(Bullet * bulA, Bullet * bulB)
   if (x21*vx21 > 0 && y21*vy21 > 0) // they are moving away from eachother
     return;
 
-//     *** I have inserted the following statements to avoid a zero divide; 
-//         (for single precision calculations, 
-//          1.0E-12 should be replaced by a larger value). **************  
+//     *** I have inserted the following statements to avoid a zero divide;
+//         (for single precision calculations,
+//          1.0E-12 should be replaced by a larger value). **************
 
   fy21= .0000001f*fabs(y21);
   if ( fabs(x21)<fy21 )
@@ -443,7 +463,7 @@ void EffectBullet::bounceBullets(Bullet * bulA, Bullet * bulB)
 //     ***  update velocities ***
   a=y21/x21;
   dvx2= -2*(vx21 +a*vy21)/((1+a*a)*(1+m21)) ;
-  
+
   bulB->dx = bulB->dx*bulB->speed +  dvx2;
   bulB->dy = bulB->dy*bulB->speed + a*dvx2;
   bulB->speed = sqrt(bulB->dx*bulB->dx + bulB->dy*bulB->dy);

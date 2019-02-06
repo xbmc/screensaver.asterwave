@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings version="1">
+  <section id="screensaver.asterwave">
+    <category id="general" label="30000">
+      <group id="1">
+        <setting id="quality" type="integer" label="30001" help="30002">
+          <default>90</default>
+          <visible>false</visible> <!-- Not direct usable for user -->
+          <constraints>
+            <minimum>50</minimum>
+            <step>5</step>
+            <maximum>150</maximum>
+          </constraints>
+          <control type="slider" format="integer"/>
+        </setting>
+        <setting id="shininess" type="number" label="30003" help="30004">
+          <default>0.4</default>
+          <visible>false</visible> <!-- Not direct usable for user -->
+          <constraints>
+            <minimum>0.0</minimum>
+            <step>0.1</step>
+            <maximum>1.0</maximum>
+          </constraints>
+          <control type="slider" format="number"/>
+        </setting>
+        <setting id="elasticity" type="number" label="30005" help="30006">
+          <default>0.5</default>
+          <visible>false</visible> <!-- Not direct usable for user -->
+          <constraints>
+            <minimum>0.0</minimum>
+            <step>0.1</step>
+            <maximum>1.0</maximum>
+          </constraints>
+          <control type="slider" format="number"/>
+        </setting>
+        <setting id="viscosity" type="number" label="30007" help="30008">
+          <default>0.05</default>
+          <visible>false</visible> <!-- Not direct usable for user -->
+          <constraints>
+            <minimum>0.0</minimum>
+            <step>0.05</step>
+            <maximum>1.0</maximum>
+          </constraints>
+          <control type="slider" format="number"/>
+        </setting>
+        <setting id="xmax" type="integer" label="30009" help="30010">
+          <default>16</default>
+          <constraints>
+            <minimum>0</minimum>
+            <step>1</step>
+            <maximum>20</maximum>
+          </constraints>
+          <control type="slider" format="integer"/>
+        </setting>
+        <setting id="xmin" type="integer" label="30011" help="30012">
+          <default>-16</default>
+          <constraints>
+            <minimum>-20</minimum>
+            <step>1</step>
+            <maximum>0</maximum>
+          </constraints>
+          <control type="slider" format="integer"/>
+        </setting>
+        <setting id="ymax" type="integer" label="30013" help="30014">
+          <default>16</default>
+          <constraints>
+            <minimum>0</minimum>
+            <step>1</step>
+            <maximum>20</maximum>
+          </constraints>
+          <control type="slider" format="integer"/>
+        </setting>
+        <setting id="ymin" type="integer" label="30015" help="30016">
+          <default>-16</default>
+          <constraints>
+            <minimum>-20</minimum>
+            <step>1</step>
+            <maximum>0</maximum>
+          </constraints>
+          <control type="slider" format="integer"/>
+        </setting>
+        <setting id="height" type="number" label="30017" help="30018">
+          <default>0.0</default>
+          <constraints>
+            <minimum>0.0</minimum>
+            <step>0.1</step>
+            <maximum>1.0</maximum>
+          </constraints>
+          <control type="slider" format="number"/>
+        </setting>
+        <setting id="wireframe" type="boolean" label="30019" help="30020">
+          <visible>false</visible> <!-- Mostly usable for tests, but not as show -->
+          <default>false</default>
+          <control type="toggle"/>
+        </setting>
+        <setting id="texturemode" type="boolean" label="30021" help="30022">
+          <visible>false</visible> <!-- Not working as false -->
+          <default>true</default>
+          <control type="toggle"/>
+        </setting>
+        <setting id="texturefolder" type="path" label="30023" help="30024">
+          <default></default>
+          <dependencies>
+            <dependency type="enable" setting="texturemode" operator="is">true</dependency>
+          </dependencies>
+          <constraints>
+            <allowempty>true</allowempty>
+          </constraints>
+          <control type="button" format="path">
+            <heading>30024</heading>
+          </control>
+        </setting>
+        <setting id="nexttexture" type="integer" label="30025" help="30026">
+          <default>15</default>
+          <constraints>
+            <minimum>0</minimum>
+            <step>5</step>
+            <maximum>3600</maximum>
+          </constraints>
+          <control type="slider" format="integer">
+            <formatlabel>30027</formatlabel>
+          </control>
+        </setting>
+      </group>
+    </category>
+  </section>
+</settings>

@@ -14,17 +14,15 @@ env:
 matrix:
   include:
     - os: linux
-      dist: trusty
+      dist: xenial
       sudo: required
       compiler: gcc
     - os: linux
-      dist: trusty
+      dist: xenial
       sudo: required
       compiler: clang
     - os: osx
-      osx_image: xcode7.3
-    - os: osx
-      osx_image: xcode6.4
+      osx_image: xcode9
 
 #
 # Some of the OS X images don't have cmake, contrary to what people
@@ -34,7 +32,7 @@ before_install:
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then which cmake || brew update        ; fi
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then which cmake || brew install cmake ; fi
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update && brew upgrade cmake || true; fi
-
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install -y libgl1-mesa-dev libglm-dev; fi
 #
 # The addon source is automatically checked out in $TRAVIS_BUILD_DIR,
 # we'll put the Kodi source on the same level

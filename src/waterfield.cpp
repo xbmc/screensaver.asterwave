@@ -1,3 +1,23 @@
+/*
+ *  Copyright (C) 2005-2019 Team Kodi
+ *  Copyright (C) 2007 Asteron (http://asteron.projects.googlepages.com/home)
+ *  This file is part of Kodi - https://kodi.tv
+ *
+ *  This Program is free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation; either version 2, or (at your option)
+ *  any later version.
+ *
+ *  This Program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with Kodi; see the file COPYING.  If not, see
+ *  <http://www.gnu.org/licenses/>.
+ */
+
 //////////////////////////////////////////////////////////////////
 // WATERFIELD.CPP
 //
@@ -6,18 +26,24 @@
 // reused and so is well commented :)
 //
 //////////////////////////////////////////////////////////////////
+
 #include "waterfield.h"
+#include "Water.h"
 #include "Util.h"
 #include <memory.h>
-#include <GL/gl.h>
 #include <vector>
 
-WaterField::WaterField()
+WaterField::WaterField(CScreensaverAsterwave* base)
+  : m_base(base)
 {
   Init(-10,10,-50,50,160,160, 10, 0.1f, 0.7f, 1.0f, 0.54f, false);
 }
 
-WaterField::WaterField(float xmin, float xmax, float ymin, float ymax, int xdivs, int ydivs, float height, float elasticity, float viscosity, float tension, float blendability, bool textureMode)
+WaterField::WaterField(CScreensaverAsterwave* base, float xmin, float xmax,
+                       float ymin, float ymax, int xdivs, int ydivs,
+                       float height, float elasticity, float viscosity,
+                       float tension, float blendability, bool textureMode)
+  : m_base(base)
 {
   Init(xmin, xmax, ymin, ymax, xdivs, ydivs, height, elasticity, viscosity, tension, blendability, textureMode);
 }
@@ -66,7 +92,7 @@ void WaterField::Init(float xmin, float xmax, float ymin, float ymax, int xdivs,
 }
 
 
-void WaterField::DrawLine(float xStart, float yStart, float xEnd, float yEnd, 
+void WaterField::DrawLine(float xStart, float yStart, float xEnd, float yEnd,
     float width, float newHeight, float strength, const CRGBA& color)
 {
   int xa, xb, ya, yb;
@@ -104,7 +130,7 @@ Sets the points within spread of the nearest vertex to
 (xNearest,yNearest) to a height of newHeight in a roughly
 circular pattern.
 ************************************************************/
-void WaterField::SetHeight(float xNearest, float yNearest, 
+void WaterField::SetHeight(float xNearest, float yNearest,
     float spread, float newHeight, const CRGBA& color)
 {
   int xcenter;
@@ -214,65 +240,49 @@ void WaterField::Render()
 {
   int i, j, k;
 
-  if (!m_textureMode){
-    std::vector<COLORVERTEX> verts(2*myYdivs);
+  if (!m_textureMode)
+  {
+    std::vector<sLight> verts(2*myYdivs);
     for(i=0; i<myXdivs-1; i++)
     {
       for(j=0; j<myYdivs; j++)
       {
         for (k=0; k<2; k++)
         {
-          verts[2*j+k].x = myXmin + (float)((i+k)*m_xdivdist);
-          verts[2*j+k].y = myYmin + (float)(j*m_ydivdist);
-          verts[2*j+k].z = (float)(myPoints[i+k][j].height);
-          verts[2*j+k].nx = myPoints[i+k][j].normal.x;
-          verts[2*j+k].ny = myPoints[i+k][j].normal.y;
-          verts[2*j+k].nz = myPoints[i+k][j].normal.z;
-          verts[2*j+k].color = myPoints[i+k][j].color;
+          verts[2*j+k].vertex.x = myXmin + (float)((i+k)*m_xdivdist);
+          verts[2*j+k].vertex.y = myYmin + (float)(j*m_ydivdist);
+          verts[2*j+k].vertex.z = (float)(myPoints[i+k][j].height);
+          verts[2*j+k].normal.x = myPoints[i+k][j].normal.x;
+          verts[2*j+k].normal.y = myPoints[i+k][j].normal.y;
+          verts[2*j+k].normal.z = myPoints[i+k][j].normal.z;
+          verts[2*j+k].color = sColor(myPoints[i+k][j].color.col);
         }
       }
-
-      glBegin(GL_TRIANGLE_STRIP);
-      glShadeModel(GL_SMOOTH);
-      for (size_t j=0;j<verts.size();++j)
-      {
-        glColor3f(verts[j].color.r/255.0, verts[j].color.g/255.0, verts[j].color.b/255.0);
-        glNormal3f(verts[j].nx, verts[j].ny, verts[j].nz);
-        glVertex3f(verts[j].x, verts[j].y, verts[j].z);
-      }
-      glEnd();
+      m_base->Draw(GL_TRIANGLE_STRIP, &verts[0], verts.size(), false);
     }
   }
   else
   {
-    std::vector<TEXTUREDVERTEX> verts(2*myYdivs);
+    std::vector<sLight> verts(2*myYdivs);
     for(i=0; i<myXdivs-1; i++)
     {
       for(j=0; j<myYdivs; j++)
       {
         for (k=0; k<2; k++)
         {
-          verts[2*j+k].x = myXmin + (float)((i+k)*m_xdivdist);
-          verts[2*j+k].y = myYmin + (float)(j*m_ydivdist);
-          verts[2*j+k].z = (float)(myPoints[i+k][j].height);
-          verts[2*j+k].nx = myPoints[i+k][j].normal.x;
-          verts[2*j+k].ny = myPoints[i+k][j].normal.y;
-          verts[2*j+k].nz = myPoints[i+k][j].normal.z;
-          verts[2*j+k].tu = 0.0f+1.0f*(float)(i+k)/(float)myXdivs + 0.5f*myPoints[i+k][j].normal.x;
-          verts[2*j+k].tv = 0.0f+1.0f*(float)j/(float)myYdivs + 0.5f*myPoints[i+k][j].normal.y;
+          verts[2*j+k].vertex.x = myXmin + (float)((i+k)*m_xdivdist);
+          verts[2*j+k].vertex.y = myYmin + (float)(j*m_ydivdist);
+          verts[2*j+k].vertex.z = (float)(myPoints[i+k][j].height);
+          verts[2*j+k].normal.x = myPoints[i+k][j].normal.x;
+          verts[2*j+k].normal.y = myPoints[i+k][j].normal.y;
+          verts[2*j+k].normal.z = myPoints[i+k][j].normal.z;
+          verts[2*j+k].coord.u = 0.0f+1.0f*(float)(i+k)/(float)myXdivs + 0.5f*myPoints[i+k][j].normal.x;
+          verts[2*j+k].coord.v = 0.0f+1.0f*(float)j/(float)myYdivs + 0.5f*myPoints[i+k][j].normal.y;
+          verts[2*j+k].color = 1.0f;
         }
       }
       // Draw it
-      glEnable(GL_TEXTURE_2D);
-      
-      glBegin(GL_TRIANGLE_STRIP);
-      for (size_t j=0;j<verts.size();++j)
-      {
-        glTexCoord2f(verts[j].tu, verts[j].tv);
-        glNormal3f(verts[j].nx, verts[j].ny, verts[j].nz);
-        glVertex3f(verts[j].x, verts[j].y, verts[j].z);
-      }
-      glEnd();
+      m_base->Draw(GL_TRIANGLE_STRIP, &verts[0], verts.size(), true);
     }
   }
 }
