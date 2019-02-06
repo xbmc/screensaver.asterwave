@@ -24,7 +24,7 @@
 #include <glm/glm.hpp>
 #include <glm/ext.hpp>
 
-#include <sys/dir.h>
+#include <dirent.h>
 
 #include "Water.h"
 #include "Effect.h"

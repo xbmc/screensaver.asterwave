@@ -23,7 +23,8 @@ elseif(APP_RENDER_SYSTEM STREQUAL "gles")
   add_definitions(${OPENGLES_DEFINITIONS})
 endif()
 
-include_directories(${KODI_INCLUDE_DIR}/..) # Hack way with "/..", need bigger Kodi cmake rework to match right include ways
+include_directories(${GLM_INCLUDE_DIR}
+                    ${KODI_INCLUDE_DIR}/..) # Hack way with "/..", need bigger Kodi cmake rework to match right include ways
 
 if(NOT ${CORE_SYSTEM_NAME} STREQUAL "")
   if(${CORE_SYSTEM_NAME} STREQUAL "osx" OR ${CORE_SYSTEM_NAME} STREQUAL "ios")
@@ -48,11 +49,5 @@ list(APPEND DEPLIBS soil2)
 list(APPEND DEPENDS glm)
 
 build_addon(screensaver.asterwave ASTERWAVE DEPLIBS)
-
-if(NOT GLM_FOUND)
-  add_dependencies(screensaver.asterwave glm)
-endif()
-
-target_include_directories(screensaver.asterwave PUBLIC ${GLM_INCLUDE_DIR})
 
 include(CPack)
