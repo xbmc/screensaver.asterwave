@@ -9,18 +9,11 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
-DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
-
 %:
 	dh $@
 
 override_dh_auto_configure:
-	dh_auto_configure -- \
-	  -DCMAKE_BUILD_TYPE=Release \
-	  -DBUILD_SHARED_LIBS=1 \
-	  -DOVERRIDE_PATHS=1 \
-	  -DCMAKE_INSTALL_LIBDIR=/usr/lib/$(DEB_HOST_MULTIARCH)/kodi \
-	  -DUSE_LTO=1
+	dh_auto_configure -- -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=1
 
 override_dh_strip:
 	dh_strip -pkodi-screensaver-asterwave --dbg-package=kodi-screensaver-asterwave-dbg
