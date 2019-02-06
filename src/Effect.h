@@ -27,6 +27,7 @@
 class AnimationEffect
 {
   public:
+    virtual ~AnimationEffect() {}
     void init(WaterSettings * settings);
     void reset();
     virtual void apply() = 0;
