@@ -33,9 +33,9 @@ const f32 FLOATEPSILON    = 0.00001f;
 
 /****************************** M A C R O S ********************************/
 
-#define SAFE_DELETE(_p)      { if(_p) { delete _p;    _p=NULL; } }
-#define SAFE_DELETE_ARRAY(_p)  { if(_p) { delete [] _p;  _p=NULL; } }
-#define SAFE_RELEASE(_p)    { if(_p) { _p->Release();  _p=NULL; } }
+#define SAFE_DELETE(_p)      { if(_p) { delete _p;    _p=nullptr; } }
+#define SAFE_DELETE_ARRAY(_p)  { if(_p) { delete [] _p;  _p=nullptr; } }
+#define SAFE_RELEASE(_p)    { if(_p) { _p->Release();  _p=nullptr; } }
 
 // Direct 3d verify
 #define DVERIFY( _func )        \

@@ -41,7 +41,7 @@ AnimationEffect * effects[] = {
   new EffectRain(),
   new EffectSwirl(),
   new EffectXBMCLogo(),
-  NULL,
+  nullptr,
   //new EffectText(),
 };
 
@@ -121,8 +121,8 @@ void CScreensaverAsterwave::Stop()
   if (m_Texture != 0)
     glDeleteTextures(1, &m_Texture);
   delete m_world.waterField;
-  m_world.waterField = NULL;
-  for (int i = 0; effects[i] != NULL; i++)
+  m_world.waterField = nullptr;
+  for (int i = 0; effects[i] != nullptr; i++)
     delete effects[i];
 }
 
