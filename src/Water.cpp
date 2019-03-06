@@ -45,8 +45,6 @@ AnimationEffect * effects[] = {
   //new EffectText(),
 };
 
-#define BUFFER_OFFSET(i) ((char *)nullptr + (i))
-
 ////////////////////////////////////////////////////////////////////////////
 // Kodi has loaded us into memory, we should set our core values
 // here and load any settings we may have from our config file
@@ -62,7 +60,9 @@ CScreensaverAsterwave::CScreensaverAsterwave()
 // is activated by Kodi.
 bool CScreensaverAsterwave::Start()
 {
-  if (!CreateShader("vert.glsl", "frag.glsl") || !CompileAndLink())
+  std::string fraqShader = kodi::GetAddonPath("resources/shaders/" GL_TYPE_STRING "/frag.glsl");
+  std::string vertShader = kodi::GetAddonPath("resources/shaders/" GL_TYPE_STRING "/vert.glsl");
+  if (!LoadShaderFiles(vertShader, fraqShader) || !CompileAndLink())
   {
     kodi::Log(ADDON_LOG_ERROR, "Failed to create and compile shader");
     return false;
@@ -367,10 +367,10 @@ void CScreensaverAsterwave::Draw(int primitive, const sLight* data, unsigned int
 
   m_normalMat = glm::transpose(glm::inverse(glm::mat3(m_modelMat)));
 
-  Enable();
+  EnableShader();
   glBufferData(GL_ARRAY_BUFFER, sizeof(sLight)*size, data, GL_DYNAMIC_DRAW);
   glDrawArrays(primitive, 0, size);
-  Disable();
+  DisableShader();
 
   if (!withTexture)
     m_Texture = oldTexture;
