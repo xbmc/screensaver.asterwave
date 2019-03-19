@@ -1,8 +1,4 @@
-#version 130
-
-#ifdef GL_ES
-precision mediump float;
-#endif
+#version 150
 
 // Structs
 struct Light {
@@ -32,10 +28,10 @@ struct Material {
 };
 
 // Attributes
-attribute vec3 a_normal;
-attribute vec4 a_position;
-attribute vec4 a_color;
-attribute vec2 a_coord;
+in vec3 a_normal;
+in vec4 a_position;
+in vec4 a_color;
+in vec2 a_coord;
 
 // Uniforms
 uniform mat4 u_projectionMatrix;
@@ -45,12 +41,12 @@ uniform Light u_light0;
 uniform Material u_material;
 
 // Varyings
-varying vec4 v_ambientAndEmission;
-varying vec3 v_normal;
+out vec4 v_ambientAndEmission;
+out vec3 v_normal;
 smooth out vec4 v_frontColor;
-varying vec3 v_light0Vector;
-varying vec3 v_light0HalfVector;
-varying vec2 v_texCoord0;
+out vec3 v_light0Vector;
+out vec3 v_light0HalfVector;
+out vec2 v_texCoord0;
 
 // Shader variables
 vec4 vertexPositionInEye;

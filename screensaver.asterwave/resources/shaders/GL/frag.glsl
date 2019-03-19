@@ -1,8 +1,4 @@
-#version 130
-
-#ifdef GL_ES
-precision mediump float;
-#endif
+#version 150
 
 // Structs
 struct Light {
@@ -39,11 +35,13 @@ uniform int u_textureId;
 
 // Varyings
 smooth in vec4 v_frontColor;
-varying vec3 v_normal;
-varying vec4 v_ambientAndEmission;
-varying vec3 v_light0Vector;
-varying vec3 v_light0HalfVector;
-varying vec2 v_texCoord0;
+in vec3 v_normal;
+in vec4 v_ambientAndEmission;
+in vec3 v_light0Vector;
+in vec3 v_light0HalfVector;
+in vec2 v_texCoord0;
+
+out vec4 fragColor;
 
 float calcSpotFactor(Light light, vec3 lightVector)
 {
@@ -141,7 +139,7 @@ vec4 calcPerFragmentLighting()
 void main()
 {
   if (u_textureId != 0)
-    gl_FragColor = calcPerFragmentLighting() * texture2D(u_texUnit, v_texCoord0);
+    fragColor = calcPerFragmentLighting() * texture2D(u_texUnit, v_texCoord0);
   else
-    gl_FragColor = calcPerFragmentLighting() * v_frontColor;
+    fragColor = calcPerFragmentLighting() * v_frontColor;
 }
