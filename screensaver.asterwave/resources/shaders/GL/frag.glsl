@@ -139,7 +139,7 @@ vec4 calcPerFragmentLighting()
 void main()
 {
   if (u_textureId != 0)
-    fragColor = calcPerFragmentLighting() * texture2D(u_texUnit, v_texCoord0);
+    fragColor = calcPerFragmentLighting() * texture(u_texUnit, v_texCoord0);
   else
     fragColor = calcPerFragmentLighting() * v_frontColor;
 }
