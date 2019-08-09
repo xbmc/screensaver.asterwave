@@ -18,7 +18,6 @@
  *  <http://www.gnu.org/licenses/>.
  */
 
-#include <kodi/utils/Time.h>
 #include <kodi/Filesystem.h>
 
 #include <glm/glm.hpp>
@@ -32,6 +31,7 @@
 #include "SOIL2/SOIL2.h"
 #include <cstdlib>
 #include <memory.h>
+#include <chrono>
 
 AnimationEffect * effects[] = {
 
@@ -100,7 +100,8 @@ bool CScreensaverAsterwave::Start()
 
   glGenBuffers(1, &m_vertexVBO);
 
-  m_lastTime = kodi::time::GetTimeSec<double>();
+  auto time = std::chrono::high_resolution_clock::now();
+  m_lastTime = std::chrono::duration<double>(time.time_since_epoch()).count();
   m_lastImageTime = m_lastTime;
   m_startOK = true;
   return true;
@@ -158,7 +159,8 @@ void CScreensaverAsterwave::Render()
   glEnableVertexAttribArray(m_hCoord);
   //@}
 
-  double currentTime = kodi::time::GetTimeSec<double>();
+  auto time = std::chrono::high_resolution_clock::now();
+  double currentTime = std::chrono::duration<double>(time.time_since_epoch()).count();
   float frameTime = currentTime - m_lastTime;
   m_lastTime = currentTime;
 
