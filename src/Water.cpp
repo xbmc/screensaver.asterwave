@@ -23,8 +23,6 @@
 #include <glm/glm.hpp>
 #include <glm/ext.hpp>
 
-#include <dirent.h>
-
 #include "Water.h"
 #include "Effect.h"
 #include "Util.h"
@@ -272,26 +270,16 @@ void CScreensaverAsterwave::LoadTexture()
   int numTextures = 0;
   std::string foundTexture;
 
-  DIR* dir = opendir(m_world.szTextureSearchPath.c_str());
-
-  struct dirent* entry;
-  while ((entry=readdir(dir)))
+  std::vector<kodi::vfs::CDirEntry> items;
+  kodi::vfs::GetDirectory(m_world.szTextureSearchPath, ".png|.bmp|.jpg|.jpeg", items);
+  for (const auto& item :items)
   {
-    int len = (int)strlen(entry->d_name);
-    if (len < 4 || (strcasecmp(entry->d_name + len - 4, ".png") != 0 &&
-                    strcasecmp(entry->d_name + len - 4, ".bmp") != 0 &&
-                    strcasecmp(entry->d_name + len - 4, ".jpg") != 0 &&
-                    strcasecmp(entry->d_name + len - 4, ".jpeg") != 0))
-      continue;
-
     if (rand() % (numTextures+1) == 0) // after n textures each has 1/n prob
     {
-      foundTexture = m_world.szTextureSearchPath + entry->d_name;
+      foundTexture = item.Path();
     }
     numTextures++;
-
   }
-  closedir(dir);
 
   if (m_Texture != 0 && !foundTexture.empty())
     glDeleteTextures(1, &m_Texture);
