@@ -24,7 +24,7 @@ include_directories(${GLM_INCLUDE_DIR}
                     ${KODI_INCLUDE_DIR}/..) # Hack way with "/..", need bigger Kodi cmake rework to match right include ways
 
 if(NOT ${CORE_SYSTEM_NAME} STREQUAL "")
-  if(${CORE_SYSTEM_NAME} STREQUAL "osx" OR ${CORE_SYSTEM_NAME} STREQUAL "ios")
+  if(CORE_SYSTEM_NAME STREQUAL darwin_embedded OR ${CORE_SYSTEM_NAME} STREQUAL "osx" OR ${CORE_SYSTEM_NAME} STREQUAL "ios")
     list(APPEND DEPLIBS "-framework CoreVideo")
   endif()
 endif()
