@@ -8,12 +8,12 @@ find_package(glm REQUIRED)
 
 # set(APP_RENDER_SYSTEM "gles") # Leaved here for test purpose only
 
-if(APP_RENDER_SYSTEM STREQUAL "gl" OR NOT APP_RENDER_SYSTEM)
+if(NOT WIN32 AND (APP_RENDER_SYSTEM STREQUAL "gl" OR NOT APP_RENDER_SYSTEM))
   find_package(OpenGl REQUIRED)
   set(DEPLIBS ${OPENGL_LIBRARIES})
   set(includes ${OPENGL_INCLUDE_DIR})
   add_definitions(${OPENGL_DEFINITIONS})
-elseif(APP_RENDER_SYSTEM STREQUAL "gles")
+elseif(APP_RENDER_SYSTEM STREQUAL "gles" OR WIN32)
   find_package(OpenGLES REQUIRED)
   set(DEPLIBS ${OPENGLES_LIBRARIES})
   set(includes ${OPENGLES_INCLUDE_DIR})
