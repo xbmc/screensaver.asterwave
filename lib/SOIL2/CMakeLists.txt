@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.5)
 
 project(SOIL2)
 
@@ -36,4 +36,5 @@ if(CORE_SYSTEM_NAME STREQUAL darwin_embedded OR CORE_SYSTEM_NAME STREQUAL osx OR
   target_link_libraries(soil2 PUBLIC "-framework CoreFoundation")
 elseif(OPENGLES_FOUND)
   target_compile_definitions(soil2 PRIVATE SOIL_GLES2)
+  target_link_libraries(soil2 PRIVATE ${OPENGLES_LIBRARIES})
 endif()

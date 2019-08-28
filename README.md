@@ -3,6 +3,7 @@
 This is a [Kodi](http://kodi.tv) screensaver addon.
 
 [![Build Status](https://travis-ci.org/xbmc/screensaver.asterwave.svg?branch=master)](https://travis-ci.org/xbmc/screensaver.asterwave)
+[![Build Status](https://ci.appveyor.com/api/projects/status/github/xbmc/screensaver.asterwave?svg=true)](https://ci.appveyor.com/project/xbmc/screensaver-asterwave)
 
 ## Build instructions
 
