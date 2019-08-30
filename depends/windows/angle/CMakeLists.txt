@@ -1,6 +1,14 @@
 cmake_minimum_required(VERSION 3.8)
 project(angle)
 
+message(STATUS "Used CMAKE_SYSTEM_NAME: ${CMAKE_SYSTEM_NAME}")
+message(STATUS "Used CMAKE_SYSTEM_VERSION: ${CMAKE_SYSTEM_VERSION}")
+message(STATUS "Used CMAKE_HOST_SYSTEM_VERSION: ${CMAKE_HOST_SYSTEM_VERSION}")
+
+if(CMAKE_SYSTEM_VERSION VERSION_LESS 10.0.16299.0)
+  message(FATAL_ERROR "Minimal Windows system version must be: 10.0.16299.0")
+endif()
+
 # Force package name to kodi, e.g. BUILD_KODI_ADDON not defined on addon depends build!
 if(NOT PACKAGE_NAME)
   set(PACKAGE_NAME "kodi")
