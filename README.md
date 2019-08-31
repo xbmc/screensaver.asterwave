@@ -1,9 +1,9 @@
 # screensaver.asterwave addon for Kodi
 
-This is a [Kodi](http://kodi.tv) screensaver addon.
+This is a [Kodi](https://kodi.tv) screensaver addon.
 
-[![Build Status](https://travis-ci.org/xbmc/screensaver.asterwave.svg?branch=master)](https://travis-ci.org/xbmc/screensaver.asterwave)
-[![Build Status](https://ci.appveyor.com/api/projects/status/github/xbmc/screensaver.asterwave?svg=true)](https://ci.appveyor.com/project/xbmc/screensaver-asterwave)
+[![Build Status](https://travis-ci.org/xbmc/screensaver.asterwave.svg?branch=Matrix)](https://travis-ci.org/xbmc/screensaver.asterwave/branches)
+[![Build Status](https://ci.appveyor.com/api/projects/status/github/xbmc/screensaver.asterwave?branch=Matrix&svg=true)](https://ci.appveyor.com/project/xbmc/screensaver-asterwave?branch=Matrix)
 
 ## Build instructions
 
