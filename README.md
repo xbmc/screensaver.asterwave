@@ -3,7 +3,8 @@
 This is a [Kodi](https://kodi.tv) screensaver addon.
 
 [![Build Status](https://travis-ci.org/xbmc/screensaver.asterwave.svg?branch=Matrix)](https://travis-ci.org/xbmc/screensaver.asterwave/branches)
-[![Build Status](https://ci.appveyor.com/api/projects/status/github/xbmc/screensaver.asterwave?branch=Matrix&svg=true)](https://ci.appveyor.com/project/xbmc/screensaver-asterwave?branch=Matrix)
+[![Build Status](https://dev.azure.com/teamkodi/binary-addons/_apis/build/status/xbmc.screensaver.asterwave?branchName=Matrix)](https://dev.azure.com/teamkodi/binary-addons/_build/latest?definitionId=41&branchName=Matrix)
+<!--- [![Build Status](https://ci.appveyor.com/api/projects/status/github/xbmc/screensaver.asterwave?branch=Matrix&svg=true)](https://ci.appveyor.com/project/xbmc/screensaver-asterwave?branch=Matrix) -->
 
 ## Build instructions
 
