@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <addon
   id="screensaver.asterwave"
-  version="3.1.1"
+  version="3.1.2"
   name="AsterWave"
   provider-name="Team Kodi">
   <requires>@ADDON_DEPENDS@</requires>
@@ -9,11 +9,12 @@
     point="xbmc.ui.screensaver"
     library_@PLATFORM@="@LIBRARY_FILENAME@"/>
   <extension point="xbmc.addon.metadata">
-    <summary>AsterWave screensaver</summary>
-    <description>A field of liquid that deforms realistically to changes in height using actual physics equations.
+    <summary lang="en_GB">AsterWave screensaver</summary>
+    <description lang="en_GB">A field of liquid that deforms realistically to changes in height using actual physics equations.
 
 Asteron: This code is adapted from a project I did for a graphics course in 2000. In beta testing this has garnered a lot of praise and I hope for it to replace cpBlobs as the most popular screensaver.</description>
     <platform>@PLATFORM@</platform>
+    <license>GPL-2.0-or-later</license>
     <assets>
       <icon>resources/icon.png</icon>
       <fanart>resources/fanart.jpg</fanart>
