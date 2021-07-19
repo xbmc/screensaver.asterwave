@@ -1,0 +1,138 @@
+# Kodi Media Center language file
+# Addon Name: Asterwave
+# Addon id: screensaver.asterwave
+# Addon Provider: Team Kodi
+msgid ""
+msgstr ""
+"Project-Id-Version: KODI Main\n"
+"Report-Msgid-Bugs-To: https://github.com/xbmc/screensavers.rsxs/issues/\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: sr_rs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#[Consistency] Make terms, settings names, brands and other minutiae, consistent throughout file.
+#[Capitalization] Avoid capitalizing every second word. See http://grammarist.com/capitalization/
+#For example, prefer wording as "This new string" instead of "This New String".
+#[Referencing] If a suitable string already exists, reuse it, making a note of where it's used!
+#[Description / location] For example, "#. Description of some setting" used on "#: xbmc/addons/guidialogaddoninfo.cpp"
+#When writing a description or setting, refer to a setting name in quotes. See existing entries for guidance.
+#For example, "Press \"OK\" for \"All seasons\"" instead of "Press OK for All seasons" after first word.
+# Following strings used for addon settings dialog
+msgctxt "#30000"
+msgid "General"
+msgstr ""
+
+msgctxt "#30001"
+msgid "Quality"
+msgstr ""
+
+msgctxt "#30002"
+msgid "Determines the resolution of the water field, higher is better/slower... tune it with physics."
+msgstr ""
+
+msgctxt "#30003"
+msgid "Shininess"
+msgstr ""
+
+msgctxt "#30004"
+msgid "Shininess of the fluid."
+msgstr ""
+
+msgctxt "#30005"
+msgid "Elasticity"
+msgstr ""
+
+msgctxt "#30006"
+msgid "Determines the springiness of the water."
+msgstr ""
+
+msgctxt "#30007"
+msgid "Viscosity"
+msgstr ""
+
+msgctxt "#30008"
+msgid "Determines the how quickly the water quiets down."
+msgstr ""
+
+msgctxt "#30009"
+msgid "X position max"
+msgstr ""
+
+msgctxt "#30010"
+msgid "For field rectangle and height."
+msgstr ""
+
+msgctxt "#30011"
+msgid "X position min"
+msgstr ""
+
+msgctxt "#30012"
+msgid "For field rectangle and height."
+msgstr ""
+
+msgctxt "#30013"
+msgid "Y position max"
+msgstr ""
+
+msgctxt "#30014"
+msgid "For field rectangle and height."
+msgstr ""
+
+msgctxt "#30015"
+msgid "Y position min"
+msgstr ""
+
+msgctxt "#30016"
+msgid "For field rectangle and height."
+msgstr ""
+
+msgctxt "#30017"
+msgid "Height"
+msgstr ""
+
+msgctxt "#30018"
+msgid "For field rectangle and height."
+msgstr ""
+
+msgctxt "#30019"
+msgid "Wireframe"
+msgstr ""
+
+msgctxt "#30020"
+msgid "Wireframe mode."
+msgstr ""
+
+msgctxt "#30021"
+msgid "Texture mode"
+msgstr ""
+
+msgctxt "#30022"
+msgid "True uses a texture as a reflection map, False uses awesome colors."
+msgstr ""
+
+msgctxt "#30023"
+msgid "Texture folder"
+msgstr ""
+
+msgctxt "#30024"
+msgid "Textures are chosen randomly from the following folder."
+msgstr ""
+
+msgctxt "#30025"
+msgid "Next texture"
+msgstr ""
+
+msgctxt "#30026"
+msgid "Time in seconds between texture transitions (slideshow)."
+msgstr ""
+
+msgctxt "#30027"
+msgid "%i seconds"
+msgstr ""
