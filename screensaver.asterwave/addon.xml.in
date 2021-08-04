@@ -18,8 +18,10 @@
       <screenshot>resources/screenshot-02.jpg</screenshot>
       <screenshot>resources/screenshot-03.jpg</screenshot>
     </assets>
+    <summary lang="da_DK">AsterWave pauseskærm</summary>
     <summary lang="de_DE">AsterWave Bildschirmschoner</summary>
     <summary lang="en_GB">AsterWave screensaver</summary>
+    <description lang="da_DK">Et felt af væske, der realistisk deformeres til ændringer i højden ved hjælp af aktuelle fysiske ligninger.[CR][CR]Asteron: Denne kode er tilpasset fra et projekt, jeg lavede til et grafikforløb i 2000. I betatestning har dette vundet en masse ros og jeg håber på, at det erstatter cpBlobs som den mest populære pauseskærm.</description>
     <description lang="de_DE">Ein Flüssigkeitsfeld, das sich unter Verwendung tatsächlicher physikalischer Gleichungen realistisch zu Höhenänderungen verformt.[CR][CR]Asteron: Dieser Code stammt aus einem Projekt, das ich für einen Grafikkurs im Jahr 2000 durchgeführt habe. Beim Betatest hat dies viel Lob erhalten und ich hoffe, dass er cpBlobs als beliebtesten Bildschirmschoner ersetzt.</description>
     <description lang="en_GB">A field of liquid that deforms realistically to changes in height using actual physics equations.[CR][CR]Asteron: This code is adapted from a project I did for a graphics course in 2000. In beta testing this has garnered a lot of praise and I hope for it to replace cpBlobs as the most popular screensaver.</description>
   </extension>
