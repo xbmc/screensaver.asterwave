@@ -5,24 +5,25 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
-"Report-Msgid-Bugs-To: https://github.com/xbmc/screensavers.rsxs/issues/\n"
+"Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2021-09-17 03:30+0000\n"
+"Last-Translator: taxigps <taxigps@sina.com>\n"
+"Language-Team: Chinese (China) <https://kodi.weblate.cloud/projects/kodi-add-ons-look-and-feel/screensaver-asterwave/zh_cn/>\n"
 "Language: zh_cn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.8\n"
 
 msgctxt "Addon Summary"
 msgid "AsterWave screensaver"
-msgstr ""
+msgstr "AsterWave 屏幕保护程序"
 
 msgctxt "Addon Description"
 msgid "A field of liquid that deforms realistically to changes in height using actual physics equations.[CR][CR]Asteron: This code is adapted from a project I did for a graphics course in 2000. In beta testing this has garnered a lot of praise and I hope for it to replace cpBlobs as the most popular screensaver."
-msgstr ""
+msgstr "这是一个液体场，使用实际的物理方程，它会随着高度的变化而发生真实的变形。[CR][CR]Asteron：这段代码改编自我2000年为一门图形课程做的一个项目。在beta测试中，这已经获得了很多赞扬，我希望它能取代cpblob成为最流行的屏幕保护程序。"
 
 # [Consistency] Make terms, settings names, brands and other minutiae, consistent throughout file.
 # [Capitalization] Avoid capitalizing every second word. See http://grammarist.com/capitalization/
@@ -34,112 +35,112 @@ msgstr ""
 # Following strings used for addon settings dialog
 msgctxt "#30000"
 msgid "General"
-msgstr ""
+msgstr "常规"
 
 msgctxt "#30001"
 msgid "Quality"
-msgstr ""
+msgstr "质量"
 
 msgctxt "#30002"
 msgid "Determines the resolution of the water field, higher is better/slower... tune it with physics."
-msgstr ""
+msgstr "确定液体场的分辨率，越高越好/越慢...用物理学来调整它。"
 
 msgctxt "#30003"
 msgid "Shininess"
-msgstr ""
+msgstr "光滑度"
 
 msgctxt "#30004"
 msgid "Shininess of the fluid."
-msgstr ""
+msgstr "液体的光泽。"
 
 msgctxt "#30005"
 msgid "Elasticity"
-msgstr ""
+msgstr "弹性"
 
 msgctxt "#30006"
 msgid "Determines the springiness of the water."
-msgstr ""
+msgstr "决定水的弹性。"
 
 msgctxt "#30007"
 msgid "Viscosity"
-msgstr ""
+msgstr "粘度"
 
 msgctxt "#30008"
 msgid "Determines the how quickly the water quiets down."
-msgstr ""
+msgstr "确定水静下来的速度。"
 
 msgctxt "#30009"
 msgid "X position max"
-msgstr ""
+msgstr "X位置最大值"
 
 msgctxt "#30010"
 msgid "For field rectangle and height."
-msgstr ""
+msgstr "用于区域矩形和高度。"
 
 msgctxt "#30011"
 msgid "X position min"
-msgstr ""
+msgstr "X位置最小值"
 
 msgctxt "#30012"
 msgid "For field rectangle and height."
-msgstr ""
+msgstr "用于区域矩形和高度。"
 
 msgctxt "#30013"
 msgid "Y position max"
-msgstr ""
+msgstr "Y位置最大值"
 
 msgctxt "#30014"
 msgid "For field rectangle and height."
-msgstr ""
+msgstr "用于区域矩形和高度。"
 
 msgctxt "#30015"
 msgid "Y position min"
-msgstr ""
+msgstr "Y位置最小值"
 
 msgctxt "#30016"
 msgid "For field rectangle and height."
-msgstr ""
+msgstr "用于区域矩形和高度。"
 
 msgctxt "#30017"
 msgid "Height"
-msgstr ""
+msgstr "高"
 
 msgctxt "#30018"
 msgid "For field rectangle and height."
-msgstr ""
+msgstr "用于区域矩形和高度。"
 
 msgctxt "#30019"
 msgid "Wireframe"
-msgstr ""
+msgstr "线框"
 
 msgctxt "#30020"
 msgid "Wireframe mode."
-msgstr ""
+msgstr "线框模式。"
 
 msgctxt "#30021"
 msgid "Texture mode"
-msgstr ""
+msgstr "纹理模式"
 
 msgctxt "#30022"
 msgid "True uses a texture as a reflection map, False uses awesome colors."
-msgstr ""
+msgstr "为真使用纹理作为反射贴图，为假使用令人惊叹的颜色。"
 
 msgctxt "#30023"
 msgid "Texture folder"
-msgstr ""
+msgstr "贴图文件夹"
 
 msgctxt "#30024"
 msgid "Textures are chosen randomly from the following folder."
-msgstr ""
+msgstr "贴图是从以下文件夹中随机选择的。"
 
 msgctxt "#30025"
 msgid "Next texture"
-msgstr ""
+msgstr "下一纹理"
 
 msgctxt "#30026"
 msgid "Time in seconds between texture transitions (slideshow)."
-msgstr ""
+msgstr "纹理变换（幻灯片放映）之间的时间（秒）。"
 
 msgctxt "#30027"
 msgid "%i seconds"
-msgstr ""
+msgstr "%i 秒"
