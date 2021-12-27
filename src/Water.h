@@ -83,7 +83,7 @@ struct sLight
   sCoord coord;
 };
 
-class ATTRIBUTE_HIDDEN CScreensaverAsterwave
+class ATTR_DLL_LOCAL CScreensaverAsterwave
   : public kodi::addon::CAddonBase,
     public kodi::addon::CInstanceScreensaver,
     public kodi::gui::gl::CShaderProgram
