@@ -46,8 +46,8 @@ CScreensaverAsterwave::CScreensaverAsterwave()
 // is activated by Kodi.
 bool CScreensaverAsterwave::Start()
 {
-  std::string fraqShader = kodi::GetAddonPath("resources/shaders/" GL_TYPE_STRING "/frag.glsl");
-  std::string vertShader = kodi::GetAddonPath("resources/shaders/" GL_TYPE_STRING "/vert.glsl");
+  std::string fraqShader = kodi::addon::GetAddonPath("resources/shaders/" GL_TYPE_STRING "/frag.glsl");
+  std::string vertShader = kodi::addon::GetAddonPath("resources/shaders/" GL_TYPE_STRING "/vert.glsl");
   if (!LoadShaderFiles(vertShader, fraqShader) || !CompileAndLink())
   {
     kodi::Log(ADDON_LOG_ERROR, "Failed to create and compile shader");
@@ -199,26 +199,26 @@ void CScreensaverAsterwave::SetDefaults()
   m_lightDir = CVector(0.0f,0.6f,-0.8f);
 
   std::string szTextureSearchPath;
-  kodi::CheckSettingBoolean("wireframe", m_world.isWireframe);
-  kodi::CheckSettingBoolean("texturemode", m_world.isTextureMode);
-  if (!kodi::CheckSettingString("texturefolder", szTextureSearchPath) ||
+  kodi::addon::CheckSettingBoolean("wireframe", m_world.isWireframe);
+  kodi::addon::CheckSettingBoolean("texturemode", m_world.isTextureMode);
+  if (!kodi::addon::CheckSettingString("texturefolder", szTextureSearchPath) ||
       szTextureSearchPath.empty() ||
       !kodi::vfs::DirectoryExists(szTextureSearchPath))
-    m_world.szTextureSearchPath = kodi::GetAddonPath("/resources/images/");
+    m_world.szTextureSearchPath = kodi::addon::GetAddonPath("/resources/images/");
   else
     m_world.szTextureSearchPath = szTextureSearchPath;
-  m_world.nextTextureTime = kodi::GetSettingInt("nexttexture");
-  kodi::CheckSettingFloat("viscosity", viscosity);
-  kodi::CheckSettingFloat("elasticity", elasticity);
-  kodi::CheckSettingFloat("height", height);
+  m_world.nextTextureTime = kodi::addon::GetSettingInt("nexttexture");
+  kodi::addon::CheckSettingFloat("viscosity", viscosity);
+  kodi::addon::CheckSettingFloat("elasticity", elasticity);
+  kodi::addon::CheckSettingFloat("height", height);
   xdivs = divs;
   ydivs = divs;
-  m_shininess = kodi::GetSettingFloat("shininess")*100.0f;
-  xmin = kodi::GetSettingInt("xmin");
-  xmax = kodi::GetSettingInt("xmax");
-  ymin = kodi::GetSettingInt("ymin");
-  xmax = kodi::GetSettingInt("xmax");
-  divs = kodi::GetSettingInt("quality");
+  m_shininess = kodi::addon::GetSettingFloat("shininess")*100.0f;
+  xmin = kodi::addon::GetSettingInt("xmin");
+  xmax = kodi::addon::GetSettingInt("xmax");
+  ymin = kodi::addon::GetSettingInt("ymin");
+  xmax = kodi::addon::GetSettingInt("xmax");
+  divs = kodi::addon::GetSettingInt("quality");
 }
 
 void CScreensaverAsterwave::SetCamera()
