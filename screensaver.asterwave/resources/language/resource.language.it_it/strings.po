@@ -7,23 +7,23 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2022-02-22 09:04+0000\n"
-"Last-Translator: Christian Gade <gade@kodi.tv>\n"
+"PO-Revision-Date: 2022-09-07 18:14+0000\n"
+"Last-Translator: Massimo Pissarello <mapi68@gmail.com>\n"
 "Language-Team: Italian <https://kodi.weblate.cloud/projects/kodi-add-ons-look-and-feel/screensaver-asterwave/it_it/>\n"
 "Language: it_it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.10.1\n"
+"X-Generator: Weblate 4.14\n"
 
 msgctxt "Addon Summary"
 msgid "AsterWave screensaver"
-msgstr ""
+msgstr "Salvaschermo AsterWave"
 
 msgctxt "Addon Description"
 msgid "A field of liquid that deforms realistically to changes in height using actual physics equations.[CR][CR]Asteron: This code is adapted from a project I did for a graphics course in 2000. In beta testing this has garnered a lot of praise and I hope for it to replace cpBlobs as the most popular screensaver."
-msgstr ""
+msgstr "Un bacino di liquido che si deforma realisticamente ai cambiamenti di altezza usando equazioni fisiche reali.[CR][CR]Asteron: questo codice è adattato da un progetto che ho fatto per un corso di grafica nel 2000. Nel beta testing questo ha raccolto molti elogi e spero che sostituisca cpBlobs come screensaver più popolare."
 
 # [Consistency] Make terms, settings names, brands and other minutiae, consistent throughout file.
 # [Capitalization] Avoid capitalizing every second word. See http://grammarist.com/capitalization/
@@ -35,79 +35,79 @@ msgstr ""
 # Following strings used for addon settings dialog
 msgctxt "#30000"
 msgid "General"
-msgstr ""
+msgstr "Generale"
 
 msgctxt "#30001"
 msgid "Quality"
-msgstr ""
+msgstr "Qualità"
 
 msgctxt "#30002"
 msgid "Determines the resolution of the water field, higher is better/slower... tune it with physics."
-msgstr ""
+msgstr "Determina la risoluzione del bacino d'acqua: più alto è migliore... segue le leggi della fisica."
 
 msgctxt "#30003"
 msgid "Shininess"
-msgstr ""
+msgstr "Brillantezza"
 
 msgctxt "#30004"
 msgid "Shininess of the fluid."
-msgstr ""
+msgstr "Lucentezza del fluido."
 
 msgctxt "#30005"
 msgid "Elasticity"
-msgstr ""
+msgstr "Elasticità"
 
 msgctxt "#30006"
 msgid "Determines the springiness of the water."
-msgstr ""
+msgstr "Determina l'elasticità dell'acqua."
 
 msgctxt "#30007"
 msgid "Viscosity"
-msgstr ""
+msgstr "Viscosità"
 
 msgctxt "#30008"
 msgid "Determines the how quickly the water quiets down."
-msgstr ""
+msgstr "Determina la velocità con cui l'acqua si calma."
 
 msgctxt "#30009"
 msgid "X position max"
-msgstr ""
+msgstr "Posizione max X"
 
 msgctxt "#30010"
 msgid "For field rectangle and height."
-msgstr ""
+msgstr "Bacino rettangolare e altezza."
 
 msgctxt "#30011"
 msgid "X position min"
-msgstr ""
+msgstr "Posizione min X"
 
 msgctxt "#30012"
 msgid "For field rectangle and height."
-msgstr ""
+msgstr "Bacino rettangolare e altezza."
 
 msgctxt "#30013"
 msgid "Y position max"
-msgstr ""
+msgstr "Posizione max Y"
 
 msgctxt "#30014"
 msgid "For field rectangle and height."
-msgstr ""
+msgstr "Bacino rettangolare e altezza."
 
 msgctxt "#30015"
 msgid "Y position min"
-msgstr ""
+msgstr "Posizione min Y"
 
 msgctxt "#30016"
 msgid "For field rectangle and height."
-msgstr ""
+msgstr "Bacino rettangolare e altezza."
 
 msgctxt "#30017"
 msgid "Height"
-msgstr ""
+msgstr "Altezza"
 
 msgctxt "#30018"
 msgid "For field rectangle and height."
-msgstr ""
+msgstr "Bacino rettangolare e altezza."
 
 msgctxt "#30019"
 msgid "Wireframe"
@@ -115,32 +115,32 @@ msgstr "A righe"
 
 msgctxt "#30020"
 msgid "Wireframe mode."
-msgstr ""
+msgstr "Modalità a righe."
 
 msgctxt "#30021"
 msgid "Texture mode"
-msgstr ""
+msgstr "Modalità trama"
 
 msgctxt "#30022"
 msgid "True uses a texture as a reflection map, False uses awesome colors."
-msgstr ""
+msgstr "'Vero' usa una texture come mappa di riflessione, 'Falso' usa colori fantastici."
 
 msgctxt "#30023"
 msgid "Texture folder"
-msgstr ""
+msgstr "Cartella trama"
 
 msgctxt "#30024"
 msgid "Textures are chosen randomly from the following folder."
-msgstr ""
+msgstr "Le trame vengono scelte casualmente dalla seguente cartella."
 
 msgctxt "#30025"
 msgid "Next texture"
-msgstr ""
+msgstr "Trama successiva"
 
 msgctxt "#30026"
 msgid "Time in seconds between texture transitions (slideshow)."
-msgstr ""
+msgstr "Tempo in secondi tra le transizioni delle trame (presentazione)."
 
 msgctxt "#30027"
 msgid "%i seconds"
-msgstr ""
+msgstr "%i secondi"
