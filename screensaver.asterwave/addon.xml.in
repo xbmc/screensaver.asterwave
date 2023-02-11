@@ -19,7 +19,7 @@
       <screenshot>resources/screenshot-03.jpg</screenshot>
     </assets>
     <summary lang="da_DK">AsterWave pauseskærm</summary>
-    <summary lang="de_DE">AsterWave Bildschirmschoner</summary>
+    <summary lang="de_DE">Bildschirmschoner AsterWave</summary>
     <summary lang="en_GB">AsterWave screensaver</summary>
     <summary lang="es_ES">Salvapantallas AsterWave</summary>
     <summary lang="fi_FI">AsterWave-näytönsäästäjä</summary>
@@ -28,7 +28,7 @@
     <summary lang="ru_RU">Заставка AsterWave</summary>
     <summary lang="zh_CN">AsterWave 屏幕保护程序</summary>
     <description lang="da_DK">Et felt af væske, der realistisk deformeres til ændringer i højden ved hjælp af aktuelle fysiske ligninger.[CR][CR]Asteron: Denne kode er tilpasset fra et projekt, jeg lavede til et grafikforløb i 2000. I betatestning har dette vundet en masse ros og jeg håber på, at det erstatter cpBlobs som den mest populære pauseskærm.</description>
-    <description lang="de_DE">Ein Flüssigkeitsfeld, das sich unter Verwendung tatsächlicher physikalischer Gleichungen realistisch zu Höhenänderungen verformt.[CR][CR]Asteron: Dieser Code stammt aus einem Projekt, das ich für einen Grafikkurs im Jahr 2000 durchgeführt habe. Beim Betatest hat dies viel Lob erhalten und ich hoffe, dass er cpBlobs als beliebtesten Bildschirmschoner ersetzt.</description>
+    <description lang="de_DE">Ein Feld aus Flüssigkeit, das sich realistisch verformt, wenn sich die Höhe ändert, wobei echte physikalische Gleichungen verwendet werden.[CR][CR]Asteron: Dieser Code stammt aus einem Projekt, das ich im Jahr 2000 für einen Grafikkurs entwickelt habe. In den Betatests gab es viel Lob und ich hoffe, dass er cpBlobs als den beliebtesten Bildschirmschoner ablösen wird.</description>
     <description lang="en_GB">A field of liquid that deforms realistically to changes in height using actual physics equations.[CR][CR]Asteron: This code is adapted from a project I did for a graphics course in 2000. In beta testing this has garnered a lot of praise and I hope for it to replace cpBlobs as the most popular screensaver.</description>
     <description lang="es_ES">Un campo de líquido que se deforma de manera realista con los cambios de altura utilizando ecuaciones físicas reales[CR][CR]Asteron: Este código es una adaptación de un proyecto que hice para un curso de gráficos en el año 2000. En las pruebas beta ha cosechado muchos elogios y espero que sustituya a cpBlobs como el salvapantallas más popular.</description>
     <description lang="fi_FI">Nestekenttä, joka muuttaa muotoaan realistisesti korkeuden muutoksien johdosta todellisia fysiikan yhtälöitä käyttäen.[CR][CR]Asteron: Tämä koodi on lähtöisin projektista, jonka tein grafiikkakurssia varten vuonna 2000. Betatestauksessa tämä keräsi paljon arvostusta ja toiveeni on, että se korvaisi cpBlobs-näytönsäästäjän suosituimpana näytönsäästäjänä.</description>
