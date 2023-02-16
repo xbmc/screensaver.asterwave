@@ -5,24 +5,25 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
-"Report-Msgid-Bugs-To: https://github.com/xbmc/screensavers.rsxs/issues/\n"
+"Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2022-12-27 18:15+0000\n"
+"Last-Translator: skypichat <skypichat@hotmail.fr>\n"
+"Language-Team: French (France) <https://kodi.weblate.cloud/projects/kodi-add-ons-look-and-feel/screensaver-asterwave/fr_fr/>\n"
 "Language: fr_fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.15\n"
 
 msgctxt "Addon Summary"
 msgid "AsterWave screensaver"
-msgstr ""
+msgstr "Économiseur d'écran AsterWave"
 
 msgctxt "Addon Description"
 msgid "A field of liquid that deforms realistically to changes in height using actual physics equations.[CR][CR]Asteron: This code is adapted from a project I did for a graphics course in 2000. In beta testing this has garnered a lot of praise and I hope for it to replace cpBlobs as the most popular screensaver."
-msgstr ""
+msgstr "Un champ de liquide qui se déforme de manière réaliste aux changements de hauteur en utilisant des équations physiques réelles.[CR][CR]Asteron : ce code est adapté d'un projet que j'ai réalisé pour un cours de graphisme en 2000. Lors des tests bêta, cela a suscité de nombreux éloges et j'espère qu'il remplacera cpBlobs en tant qu'économiseur d'écran le plus populaire."
 
 # [Consistency] Make terms, settings names, brands and other minutiae, consistent throughout file.
 # [Capitalization] Avoid capitalizing every second word. See http://grammarist.com/capitalization/
@@ -34,112 +35,112 @@ msgstr ""
 # Following strings used for addon settings dialog
 msgctxt "#30000"
 msgid "General"
-msgstr ""
+msgstr "Général"
 
 msgctxt "#30001"
 msgid "Quality"
-msgstr ""
+msgstr "Qualité"
 
 msgctxt "#30002"
 msgid "Determines the resolution of the water field, higher is better/slower... tune it with physics."
-msgstr ""
+msgstr "Détermine la résolution du champ d'eau, plus c'est haut, mieux c'est/plus lent... accordez-le avec la physique."
 
 msgctxt "#30003"
 msgid "Shininess"
-msgstr ""
+msgstr "Brillance"
 
 msgctxt "#30004"
 msgid "Shininess of the fluid."
-msgstr ""
+msgstr "Brillance du fluide."
 
 msgctxt "#30005"
 msgid "Elasticity"
-msgstr ""
+msgstr "Élasticité"
 
 msgctxt "#30006"
 msgid "Determines the springiness of the water."
-msgstr ""
+msgstr "Détermine l'élasticité de l'eau."
 
 msgctxt "#30007"
 msgid "Viscosity"
-msgstr ""
+msgstr "Viscosité"
 
 msgctxt "#30008"
 msgid "Determines the how quickly the water quiets down."
-msgstr ""
+msgstr "Détermine la vitesse à laquelle l'eau se calme."
 
 msgctxt "#30009"
 msgid "X position max"
-msgstr ""
+msgstr "Position X max"
 
 msgctxt "#30010"
 msgid "For field rectangle and height."
-msgstr ""
+msgstr "Pour la base du rectangle et la hauteur."
 
 msgctxt "#30011"
 msgid "X position min"
-msgstr ""
+msgstr "Position X min"
 
 msgctxt "#30012"
 msgid "For field rectangle and height."
-msgstr ""
+msgstr "Pour la base du rectangle et la hauteur."
 
 msgctxt "#30013"
 msgid "Y position max"
-msgstr ""
+msgstr "Position Y max"
 
 msgctxt "#30014"
 msgid "For field rectangle and height."
-msgstr ""
+msgstr "Pour la base du rectangle et la hauteur."
 
 msgctxt "#30015"
 msgid "Y position min"
-msgstr ""
+msgstr "Position Y min"
 
 msgctxt "#30016"
 msgid "For field rectangle and height."
-msgstr ""
+msgstr "Pour la base du rectangle et la hauteur."
 
 msgctxt "#30017"
 msgid "Height"
-msgstr ""
+msgstr "Hauteur"
 
 msgctxt "#30018"
 msgid "For field rectangle and height."
-msgstr ""
+msgstr "Pour la base du rectangle et la hauteur."
 
 msgctxt "#30019"
 msgid "Wireframe"
-msgstr ""
+msgstr "Fil de fer"
 
 msgctxt "#30020"
 msgid "Wireframe mode."
-msgstr ""
+msgstr "Mode filaire."
 
 msgctxt "#30021"
 msgid "Texture mode"
-msgstr ""
+msgstr "Mode Texture"
 
 msgctxt "#30022"
 msgid "True uses a texture as a reflection map, False uses awesome colors."
-msgstr ""
+msgstr "Actif utilise une texture comme carte de réflexion, inactif utilise des couleurs impressionnantes."
 
 msgctxt "#30023"
 msgid "Texture folder"
-msgstr ""
+msgstr "Dossier de textures"
 
 msgctxt "#30024"
 msgid "Textures are chosen randomly from the following folder."
-msgstr ""
+msgstr "Les textures sont choisies au hasard dans le dossier suivant."
 
 msgctxt "#30025"
 msgid "Next texture"
-msgstr ""
+msgstr "Texture suivante"
 
 msgctxt "#30026"
 msgid "Time in seconds between texture transitions (slideshow)."
-msgstr ""
+msgstr "Temps en secondes entre les transitions de texture (diaporama)."
 
 msgctxt "#30027"
 msgid "%i seconds"
-msgstr ""
+msgstr "%i secondes"
