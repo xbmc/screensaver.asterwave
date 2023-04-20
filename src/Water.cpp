@@ -69,7 +69,7 @@ bool CScreensaverAsterwave::Start()
 
   SetDefaults();
   CreateLight();
-  m_world.waterField = new WaterField(this, xmin, xmax, ymin, ymax, xdivs, ydivs, height, elasticity, viscosity, tension, blendability, m_world.isTextureMode);
+  m_world.waterField = std::make_unique<WaterField>(this, xmin, xmax, ymin, ymax, xdivs, ydivs, height, elasticity, viscosity, tension, blendability, m_world.isTextureMode);
   LoadEffects();
 
   if (m_world.isTextureMode)
@@ -107,8 +107,7 @@ void CScreensaverAsterwave::Stop()
 
   if (m_Texture != 0)
     glDeleteTextures(1, &m_Texture);
-  delete m_world.waterField;
-  m_world.waterField = nullptr;
+
   for (int i = 0; effects[i] != nullptr; i++)
     delete effects[i];
 }
