@@ -18,16 +18,15 @@
 #include <cstdlib>
 #include <memory.h>
 #include <chrono>
+#include <array>
 
-AnimationEffect * effects[] = {
-
+std::array<AnimationEffect*, 6> effects = {
   new EffectBoil(),
   new EffectTwist(),
   new EffectBullet(),
   new EffectRain(),
   new EffectSwirl(),
   new EffectXBMCLogo(),
-  nullptr,
   //new EffectText(),
 };
 
@@ -75,10 +74,9 @@ bool CScreensaverAsterwave::Start()
   if (m_world.isTextureMode)
   {
     LoadTexture();
-    m_world.effectCount--; //get rid of logo effect
   }
 
-  m_world.effectType = rand()%m_world.effectCount;
+  m_world.effectType = rand()%effects.size();
   m_world.frame = 0;
   m_world.nextEffectTime = 0;
 
@@ -108,8 +106,8 @@ void CScreensaverAsterwave::Stop()
   if (m_Texture != 0)
     glDeleteTextures(1, &m_Texture);
 
-  for (int i = 0; effects[i] != nullptr; i++)
-    delete effects[i];
+  for (auto& effect : effects)
+    delete effect;
 }
 
 // Kodi tells us to render a frame of
@@ -170,7 +168,7 @@ void CScreensaverAsterwave::Render()
       incrementColor();
     //static limit = 0;if (limit++>3)
     m_world.effectType += 1;//+rand() % (ANIM_MAX-1);
-    m_world.effectType %= m_world.effectCount;
+    m_world.effectType %= effects.size();
     effects[m_world.effectType]->reset();
     m_world.nextEffectTime = m_world.frame + effects[m_world.effectType]->minDuration() +
       rand() % (effects[m_world.effectType]->maxDuration() - effects[m_world.effectType]->minDuration());
@@ -276,10 +274,8 @@ void CScreensaverAsterwave::LoadTexture()
 
 void CScreensaverAsterwave::LoadEffects()
 {
-  int i = 0;
-  while(effects[i] != nullptr)
-    effects[i++]->init(&m_world);
-  m_world.effectCount = i;
+  for (auto& effect : effects)
+    effect->init(&m_world);
 }
 
 void CScreensaverAsterwave::SetupRenderState()

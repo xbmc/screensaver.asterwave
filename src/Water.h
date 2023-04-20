@@ -26,7 +26,6 @@ struct WaterSettings
   int frame;
   int nextEffectTime;
   int nextTextureTime;
-  int effectCount;
   float scaleX;
   bool isWireframe;
   bool isTextureMode;
