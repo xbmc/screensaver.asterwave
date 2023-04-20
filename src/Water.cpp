@@ -20,14 +20,14 @@
 #include <chrono>
 #include <array>
 
-std::array<AnimationEffect*, 6> effects = {
-  new EffectBoil(),
-  new EffectTwist(),
-  new EffectBullet(),
-  new EffectRain(),
-  new EffectSwirl(),
-  new EffectXBMCLogo(),
-  //new EffectText(),
+std::array<std::unique_ptr<AnimationEffect>, 6> effects = {
+  std::make_unique<EffectBoil>(),
+  std::make_unique<EffectTwist>(),
+  std::make_unique<EffectBullet>(),
+  std::make_unique<EffectRain>(),
+  std::make_unique<EffectSwirl>(),
+  std::make_unique<EffectXBMCLogo>(),
+  // std::make_unique<EffectText>(),
 };
 
 ////////////////////////////////////////////////////////////////////////////
@@ -105,9 +105,6 @@ void CScreensaverAsterwave::Stop()
 
   if (m_Texture != 0)
     glDeleteTextures(1, &m_Texture);
-
-  for (auto& effect : effects)
-    delete effect;
 }
 
 // Kodi tells us to render a frame of
