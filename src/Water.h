@@ -15,16 +15,17 @@
 
 #include "waterfield.h"
 
+#include <memory>
+
 void SetAnimation();
 
 struct WaterSettings
 {
-  WaterField * waterField;
+  std::unique_ptr<WaterField> waterField;
   int effectType;
   int frame;
   int nextEffectTime;
   int nextTextureTime;
-  int effectCount;
   float scaleX;
   bool isWireframe;
   bool isTextureMode;
