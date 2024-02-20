@@ -84,6 +84,10 @@ bool CScreensaverAsterwave::Start()
 
   SetCamera();
 
+#if defined(HAS_GL)
+  glGenVertexArrays(1, &m_vao);
+#endif
+
   glGenBuffers(1, &m_vertexVBO);
 
   auto time = std::chrono::high_resolution_clock::now();
@@ -111,6 +115,10 @@ void CScreensaverAsterwave::Stop()
   m_world.waterField = nullptr;
   for (int i = 0; effects[i] != nullptr; i++)
     delete effects[i];
+
+#if defined(HAS_GL)
+  glDeleteVertexArrays(1, &m_vao);
+#endif
 }
 
 // Kodi tells us to render a frame of
@@ -129,6 +137,10 @@ void CScreensaverAsterwave::Render()
    * TODO: Maybe add a separate interface call to inform about?
    */
   //@{
+#if defined(HAS_GL)
+  glBindVertexArray(m_vao);
+#endif
+
   glBindBuffer(GL_ARRAY_BUFFER, m_vertexVBO);
   glBindTexture(GL_TEXTURE_2D, m_Texture);
 
@@ -188,6 +200,12 @@ void CScreensaverAsterwave::Render()
   glDisableVertexAttribArray(m_hNormal);
   glDisableVertexAttribArray(m_hColor);
   glDisableVertexAttribArray(m_hCoord);
+
+  glBindBuffer(GL_ARRAY_BUFFER, 0);
+
+#if defined(HAS_GL)
+  glBindVertexArray(0);
+#endif
 }
 
 void CScreensaverAsterwave::SetDefaults()
