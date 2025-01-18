@@ -165,6 +165,7 @@ private:
   double m_lastImageTime = 0;
   bool m_startOK = false;
 
+  GLuint m_vao = 0;
   GLuint m_vertexVBO = 0;
 
   float xmin = -10.0f;
