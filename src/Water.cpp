@@ -18,17 +18,16 @@
 #include <cstdlib>
 #include <memory.h>
 #include <chrono>
+#include <array>
 
-AnimationEffect * effects[] = {
-
-  new EffectBoil(),
-  new EffectTwist(),
-  new EffectBullet(),
-  new EffectRain(),
-  new EffectSwirl(),
-  new EffectXBMCLogo(),
-  nullptr,
-  //new EffectText(),
+std::array<std::unique_ptr<AnimationEffect>, 6> effects = {
+  std::make_unique<EffectBoil>(),
+  std::make_unique<EffectTwist>(),
+  std::make_unique<EffectBullet>(),
+  std::make_unique<EffectRain>(),
+  std::make_unique<EffectSwirl>(),
+  std::make_unique<EffectXBMCLogo>(),
+  // std::make_unique<EffectText>(),
 };
 
 ////////////////////////////////////////////////////////////////////////////
@@ -69,16 +68,15 @@ bool CScreensaverAsterwave::Start()
 
   SetDefaults();
   CreateLight();
-  m_world.waterField = new WaterField(this, xmin, xmax, ymin, ymax, xdivs, ydivs, height, elasticity, viscosity, tension, blendability, m_world.isTextureMode);
+  m_world.waterField = std::make_unique<WaterField>(this, xmin, xmax, ymin, ymax, xdivs, ydivs, height, elasticity, viscosity, tension, blendability, m_world.isTextureMode);
   LoadEffects();
 
   if (m_world.isTextureMode)
   {
     LoadTexture();
-    m_world.effectCount--; //get rid of logo effect
   }
 
-  m_world.effectType = rand()%m_world.effectCount;
+  m_world.effectType = rand()%effects.size();
   m_world.frame = 0;
   m_world.nextEffectTime = 0;
 
@@ -107,10 +105,6 @@ void CScreensaverAsterwave::Stop()
 
   if (m_Texture != 0)
     glDeleteTextures(1, &m_Texture);
-  delete m_world.waterField;
-  m_world.waterField = nullptr;
-  for (int i = 0; effects[i] != nullptr; i++)
-    delete effects[i];
 }
 
 // Kodi tells us to render a frame of
@@ -171,7 +165,7 @@ void CScreensaverAsterwave::Render()
       incrementColor();
     //static limit = 0;if (limit++>3)
     m_world.effectType += 1;//+rand() % (ANIM_MAX-1);
-    m_world.effectType %= m_world.effectCount;
+    m_world.effectType %= effects.size();
     effects[m_world.effectType]->reset();
     m_world.nextEffectTime = m_world.frame + effects[m_world.effectType]->minDuration() +
       rand() % (effects[m_world.effectType]->maxDuration() - effects[m_world.effectType]->minDuration());
@@ -277,10 +271,8 @@ void CScreensaverAsterwave::LoadTexture()
 
 void CScreensaverAsterwave::LoadEffects()
 {
-  int i = 0;
-  while(effects[i] != nullptr)
-    effects[i++]->init(&m_world);
-  m_world.effectCount = i;
+  for (auto& effect : effects)
+    effect->init(&m_world);
 }
 
 void CScreensaverAsterwave::SetupRenderState()
