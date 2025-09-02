@@ -18,6 +18,7 @@
       <screenshot>resources/screenshot-02.jpg</screenshot>
       <screenshot>resources/screenshot-03.jpg</screenshot>
     </assets>
+    <summary lang="bs_BA">AsterWave čuvar ekrana</summary>
     <summary lang="ca_ES">Estalvi de pantalla AsterWave</summary>
     <summary lang="da_DK">AsterWave pauseskærm</summary>
     <summary lang="de_DE">Bildschirmschoner AsterWave</summary>
@@ -29,6 +30,7 @@
     <summary lang="ru_RU">Заставка AsterWave</summary>
     <summary lang="sv_SE">AsterWave skärmsläckare</summary>
     <summary lang="zh_CN">AsterWave 屏幕保护程序</summary>
+    <description lang="bs_BA">Polje tečnosti koje se realistično deformiše u skladu sa promjenama visine koristeći stvarne fizičke jednačine.[CR][CR]Asteron: Ovaj kod je adaptiran iz projekta koji sam radio za kurs grafike 2000. godine. U beta testiranju ovo je dobilo mnogo pohvala i nadam se da će zamijeniti cpBlobs kao najpopularniji čuvar ekrana.</description>
     <description lang="ca_ES">Un camp de líquid que es deforma de manera realista als canvis d&apos;alçada utilitzant equacions físiques reals.[CR][CR]Asteron: Aquest codi està adaptat d&apos;un projecte que vaig fer per a un curs de gràfics l&apos;any 2000. En les proves beta, ha obtingut molts elogis i espero que substitueixi cpBlobs com l&apos;estalvi de pantalles més popular.</description>
     <description lang="da_DK">Et felt af væske, der realistisk deformeres til ændringer i højden ved hjælp af aktuelle fysiske ligninger.[CR][CR]Asteron: Denne kode er tilpasset fra et projekt, jeg lavede til et grafikforløb i 2000. I betatestning har dette vundet en masse ros og jeg håber på, at det erstatter cpBlobs som den mest populære pauseskærm.</description>
     <description lang="de_DE">Ein Feld aus Flüssigkeit, das sich realistisch verformt, wenn sich die Höhe ändert, wobei echte physikalische Gleichungen verwendet werden.[CR][CR]Asteron: Dieser Code stammt aus einem Projekt, das ich im Jahr 2000 für einen Grafikkurs entwickelt habe. In den Betatests gab es viel Lob und ich hoffe, dass er cpBlobs als den beliebtesten Bildschirmschoner ablösen wird.</description>
