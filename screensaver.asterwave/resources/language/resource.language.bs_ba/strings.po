@@ -5,25 +5,25 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Main\n"
-"Report-Msgid-Bugs-To: https://github.com/xbmc/screensavers.rsxs/issues/\n"
+"Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-05-20 22:29+0000\n"
-"Last-Translator: Christian Gade <gade@kodi.tv>\n"
+"PO-Revision-Date: 2025-08-31 13:29+0000\n"
+"Last-Translator: SecularSteve <fairfull.playing@gmail.com>\n"
 "Language-Team: Bosnian (Bosnia and Herzegovina) <https://kodi.weblate.cloud/projects/kodi-add-ons-look-and-feel/screensaver-asterwave/bs_ba/>\n"
 "Language: bs_ba\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.6.2\n"
+"X-Generator: Weblate 5.13\n"
 
 msgctxt "Addon Summary"
 msgid "AsterWave screensaver"
-msgstr ""
+msgstr "AsterWave čuvar ekrana"
 
 msgctxt "Addon Description"
 msgid "A field of liquid that deforms realistically to changes in height using actual physics equations.[CR][CR]Asteron: This code is adapted from a project I did for a graphics course in 2000. In beta testing this has garnered a lot of praise and I hope for it to replace cpBlobs as the most popular screensaver."
-msgstr ""
+msgstr "Polje tečnosti koje se realistično deformiše u skladu sa promjenama visine koristeći stvarne fizičke jednačine.[CR][CR]Asteron: Ovaj kod je adaptiran iz projekta koji sam radio za kurs grafike 2000. godine. U beta testiranju ovo je dobilo mnogo pohvala i nadam se da će zamijeniti cpBlobs kao najpopularniji čuvar ekrana."
 
 # [Consistency] Make terms, settings names, brands and other minutiae, consistent throughout file.
 # [Capitalization] Avoid capitalizing every second word. See http://grammarist.com/capitalization/
@@ -35,112 +35,112 @@ msgstr ""
 # Following strings used for addon settings dialog
 msgctxt "#30000"
 msgid "General"
-msgstr "Opšte"
+msgstr "Općenito"
 
 msgctxt "#30001"
 msgid "Quality"
-msgstr ""
+msgstr "Kvalitet"
 
 msgctxt "#30002"
 msgid "Determines the resolution of the water field, higher is better/slower... tune it with physics."
-msgstr ""
+msgstr "Određuje rezoluciju vodenog polja, veće je bolje/sporije... podesite ga prema fizici."
 
 msgctxt "#30003"
 msgid "Shininess"
-msgstr ""
+msgstr "Sjaj"
 
 msgctxt "#30004"
 msgid "Shininess of the fluid."
-msgstr ""
+msgstr "Sjaj tečnosti."
 
 msgctxt "#30005"
 msgid "Elasticity"
-msgstr ""
+msgstr "Elastičnost"
 
 msgctxt "#30006"
 msgid "Determines the springiness of the water."
-msgstr ""
+msgstr "Određuje proljetnu čvrstoću vode."
 
 msgctxt "#30007"
 msgid "Viscosity"
-msgstr ""
+msgstr "Viskoznost"
 
 msgctxt "#30008"
 msgid "Determines the how quickly the water quiets down."
-msgstr ""
+msgstr "Određuje koliko brzo se voda smiruje."
 
 msgctxt "#30009"
 msgid "X position max"
-msgstr ""
+msgstr "Maksimalna pozicija X"
 
 msgctxt "#30010"
 msgid "For field rectangle and height."
-msgstr ""
+msgstr "Za pravougaonik i visinu polja."
 
 msgctxt "#30011"
 msgid "X position min"
-msgstr ""
+msgstr "Min. položaj X"
 
 msgctxt "#30012"
 msgid "For field rectangle and height."
-msgstr ""
+msgstr "Za pravougaonik i visinu polja."
 
 msgctxt "#30013"
 msgid "Y position max"
-msgstr ""
+msgstr "Maksimalni položaj Y"
 
 msgctxt "#30014"
 msgid "For field rectangle and height."
-msgstr ""
+msgstr "Za pravougaonik i visinu polja."
 
 msgctxt "#30015"
 msgid "Y position min"
-msgstr ""
+msgstr "Min. položaj Y"
 
 msgctxt "#30016"
 msgid "For field rectangle and height."
-msgstr ""
+msgstr "Za pravougaonik i visinu polja."
 
 msgctxt "#30017"
 msgid "Height"
-msgstr ""
+msgstr "Visina"
 
 msgctxt "#30018"
 msgid "For field rectangle and height."
-msgstr ""
+msgstr "Za pravougaonik i visinu polja."
 
 msgctxt "#30019"
 msgid "Wireframe"
-msgstr ""
+msgstr "Žičani model"
 
 msgctxt "#30020"
 msgid "Wireframe mode."
-msgstr ""
+msgstr "Mod žičanog modela."
 
 msgctxt "#30021"
 msgid "Texture mode"
-msgstr ""
+msgstr "Način teksture"
 
 msgctxt "#30022"
 msgid "True uses a texture as a reflection map, False uses awesome colors."
-msgstr ""
+msgstr "Vrijednost True koristi teksturu kao mapu refleksije, dok vrijednost False koristi sjajne boje."
 
 msgctxt "#30023"
 msgid "Texture folder"
-msgstr ""
+msgstr "Fascikla tekstura"
 
 msgctxt "#30024"
 msgid "Textures are chosen randomly from the following folder."
-msgstr ""
+msgstr "Teksture se nasumično biraju iz sljedeće mape."
 
 msgctxt "#30025"
 msgid "Next texture"
-msgstr ""
+msgstr "Sljedeća tekstura"
 
 msgctxt "#30026"
 msgid "Time in seconds between texture transitions (slideshow)."
-msgstr ""
+msgstr "Vrijeme u sekundama između prijelaza tekstura (slajdšou)."
 
 msgctxt "#30027"
 msgid "%i seconds"
-msgstr ""
+msgstr "%i sekundi"
