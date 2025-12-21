@@ -7,23 +7,23 @@ msgstr ""
 "Project-Id-Version: KODI Main\n"
 "Report-Msgid-Bugs-To: translations@kodi.tv\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2022-02-22 09:04+0000\n"
-"Last-Translator: Christian Gade <gade@kodi.tv>\n"
+"PO-Revision-Date: 2025-12-21 17:13+0000\n"
+"Last-Translator: Havok Dan <havokdan@yahoo.com.br>\n"
 "Language-Team: Portuguese (Brazil) <https://kodi.weblate.cloud/projects/kodi-add-ons-look-and-feel/screensaver-asterwave/pt_br/>\n"
 "Language: pt_br\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.10.1\n"
+"X-Generator: Weblate 5.15.1\n"
 
 msgctxt "Addon Summary"
 msgid "AsterWave screensaver"
-msgstr ""
+msgstr "Protetor de tela AsterWave"
 
 msgctxt "Addon Description"
 msgid "A field of liquid that deforms realistically to changes in height using actual physics equations.[CR][CR]Asteron: This code is adapted from a project I did for a graphics course in 2000. In beta testing this has garnered a lot of praise and I hope for it to replace cpBlobs as the most popular screensaver."
-msgstr ""
+msgstr "Um campo de líquido que se deforma realisticamente com mudanças de altura usando equações físicas reais.[CR][CR]Asteron: Este código foi adaptado de um projeto que fiz para um curso de computação gráfica em 2000. Nos testes beta, ele recebeu muitos elogios e espero que substitua o cpBlobs como o protetor de tela mais popular."
 
 # [Consistency] Make terms, settings names, brands and other minutiae, consistent throughout file.
 # [Capitalization] Avoid capitalizing every second word. See http://grammarist.com/capitalization/
@@ -39,11 +39,11 @@ msgstr "Geral"
 
 msgctxt "#30001"
 msgid "Quality"
-msgstr ""
+msgstr "Qualidade"
 
 msgctxt "#30002"
 msgid "Determines the resolution of the water field, higher is better/slower... tune it with physics."
-msgstr ""
+msgstr "Determina a resolução do campo de água; quanto maior, melhor/mais lento... ajuste-a com base na física."
 
 msgctxt "#30003"
 msgid "Shininess"
