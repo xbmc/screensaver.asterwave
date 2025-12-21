@@ -27,6 +27,7 @@
     <summary lang="fi_FI">AsterWave-näytönsäästäjä</summary>
     <summary lang="fr_FR">Économiseur d&apos;écran AsterWave</summary>
     <summary lang="it_IT">Salvaschermo AsterWave</summary>
+    <summary lang="pt_BR">Protetor de tela AsterWave</summary>
     <summary lang="ru_RU">Заставка AsterWave</summary>
     <summary lang="sv_SE">AsterWave skärmsläckare</summary>
     <summary lang="zh_CN">AsterWave 屏幕保护程序</summary>
@@ -39,6 +40,7 @@
     <description lang="fi_FI">Nestekenttä, joka muuttaa muotoaan realistisesti korkeuden muutoksien johdosta todellisia fysiikan yhtälöitä käyttäen.[CR][CR]Asteron: Tämä koodi on lähtöisin projektista, jonka tein grafiikkakurssia varten vuonna 2000. Betatestauksessa tämä keräsi paljon arvostusta ja toiveeni on, että se korvaisi cpBlobs-näytönsäästäjän suosituimpana näytönsäästäjänä.</description>
     <description lang="fr_FR">Un champ de liquide qui se déforme de manière réaliste aux changements de hauteur en utilisant des équations physiques réelles.[CR][CR]Asteron : ce code est adapté d&apos;un projet que j&apos;ai réalisé pour un cours de graphisme en 2000. Lors des tests bêta, cela a suscité de nombreux éloges et j&apos;espère qu&apos;il remplacera cpBlobs en tant qu&apos;économiseur d&apos;écran le plus populaire.</description>
     <description lang="it_IT">Un bacino di liquido che si deforma realisticamente ai cambiamenti di altezza usando equazioni fisiche reali.[CR][CR]Asteron: questo codice è adattato da un progetto che ho fatto per un corso di grafica nel 2000. Nel beta testing questo ha raccolto molti elogi e spero che sostituisca cpBlobs come salvaschermo più popolare.</description>
+    <description lang="pt_BR">Um campo de líquido que se deforma realisticamente com mudanças de altura usando equações físicas reais.[CR][CR]Asteron: Este código foi adaptado de um projeto que fiz para um curso de computação gráfica em 2000. Nos testes beta, ele recebeu muitos elogios e espero que substitua o cpBlobs como o protetor de tela mais popular.</description>
     <description lang="ru_RU">Область с жидкостью, которая реалистично меняет свою форму в зависимости от изменений высот на основе реальных физических формулах. Этот код адаптирован из проекта, который я сделал для курса графики в 2000. Во время бета-тестирования, эта заставка получила большое число положительных отзывов, и я надеюсь, что она станет заменой CpBlobs как самой популярной заставкой.</description>
     <description lang="sv_SE">Ett vätskefält som deformeras realistiskt efter höjdförändringar med hjälp av verkliga fysikekvationer.[CR][CR]Asteron: Den här koden är anpassad från ett projekt som jag gjorde för en grafikkurs år 2000. I betatestningen har den fått mycket beröm och jag hoppas att den ska ersätta cpBlobs som den mest populära skärmsläckaren.</description>
     <description lang="zh_CN">这是一个液体场，使用实际的物理方程，它会随着高度的变化而发生真实的变形。[CR][CR]Asteron：这段代码改编自我2000年为一门图形课程做的一个项目。在beta测试中，这已经获得了很多赞扬，我希望它能取代cpblob成为最流行的屏幕保护程序。</description>
